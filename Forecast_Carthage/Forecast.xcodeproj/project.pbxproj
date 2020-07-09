@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA1A1F9524AD0C30001052FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A1F9424AD0C30001052FE /* AppDelegate.swift */; };
+		EA1A1F9724AD0C30001052FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A1F9624AD0C30001052FE /* SceneDelegate.swift */; };
+		EA1A1F9C24AD0C30001052FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1A1F9A24AD0C30001052FE /* Main.storyboard */; };
+		EA1A1F9E24AD0C35001052FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1A1F9D24AD0C35001052FE /* Assets.xcassets */; };
+		EA1A1FA124AD0C35001052FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1A1F9F24AD0C35001052FE /* LaunchScreen.storyboard */; };
+		EA1A1FAD24AD1D9C001052FE /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A1FAC24AD1D9C001052FE /* WeatherCell.swift */; };
+		EA1A1FAF24AD1F65001052FE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A1FAE24AD1F65001052FE /* Weather.swift */; };
+		EA1A1FB124AD2079001052FE /* WeathersLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A1FB024AD2079001052FE /* WeathersLoader.swift */; };
+		EA32B90124AFD0FB001792E6 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B90024AFD0FB001792E6 /* AlamofireViewController.swift */; };
+		EA32B90624B2840B001792E6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA32B90524B2840B001792E6 /* Alamofire.framework */; };
+		EA32B90D24B29D31001792E6 /* HourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B90C24B29D31001792E6 /* HourCollectionViewCell.swift */; };
+		EA32B94F24B615A4001792E6 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B94E24B615A4001792E6 /* Persistance.swift */; };
+		EA32B95124B61819001792E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95024B61819001792E6 /* UserViewController.swift */; };
+		EA32B95324B6262D001792E6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA32B95224B6262D001792E6 /* Realm.framework */; };
+		EA32B95424B6262D001792E6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA32B95224B6262D001792E6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA32B95724B62631001792E6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA32B95624B62631001792E6 /* RealmSwift.framework */; };
+		EA32B95824B62632001792E6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA32B95624B62631001792E6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA32B95A24B628F2001792E6 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95924B628F2001792E6 /* ToDoViewController.swift */; };
+		EA32B95C24B62BFF001792E6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95B24B62BFF001792E6 /* TaskCell.swift */; };
+		EA32B95E24B64E90001792E6 /* ToDoCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95D24B64E90001792E6 /* ToDoCoreDataViewController.swift */; };
+		EA32B96124B6522E001792E6 /* Forecast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95F24B6522E001792E6 /* Forecast.xcdatamodeld */; };
+		EA32B96724B760B9001792E6 /* TaskCoreDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B96624B760B9001792E6 /* TaskCoreDataCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA32B95524B6262D001792E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA32B95824B62632001792E6 /* RealmSwift.framework in Embed Frameworks */,
+				EA32B95424B6262D001792E6 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA1A1F9124AD0C30001052FE /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1A1F9424AD0C30001052FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA1A1F9624AD0C30001052FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA1A1F9B24AD0C30001052FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA1A1F9D24AD0C35001052FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA1A1FA024AD0C35001052FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA1A1FA224AD0C35001052FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1A1FAC24AD1D9C001052FE /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		EA1A1FAE24AD1F65001052FE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		EA1A1FB024AD2079001052FE /* WeathersLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeathersLoader.swift; sourceTree = "<group>"; };
+		EA32B90024AFD0FB001792E6 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
+		EA32B90424B283F7001792E6 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		EA32B90524B2840B001792E6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		EA32B90C24B29D31001792E6 /* HourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA32B94E24B615A4001792E6 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		EA32B95024B61819001792E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		EA32B95224B6262D001792E6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		EA32B95624B62631001792E6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		EA32B95924B628F2001792E6 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		EA32B95B24B62BFF001792E6 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		EA32B95D24B64E90001792E6 /* ToDoCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCoreDataViewController.swift; sourceTree = "<group>"; };
+		EA32B96024B6522E001792E6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EA32B96624B760B9001792E6 /* TaskCoreDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCoreDataCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA1A1F8E24AD0C30001052FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA32B95324B6262D001792E6 /* Realm.framework in Frameworks */,
+				EA32B90624B2840B001792E6 /* Alamofire.framework in Frameworks */,
+				EA32B95724B62631001792E6 /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA1A1F8824AD0C30001052FE = {
+			isa = PBXGroup;
+			children = (
+				EA1A1F9324AD0C30001052FE /* Forecast */,
+				EA1A1F9224AD0C30001052FE /* Products */,
+				EA32B90324B283F7001792E6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA1A1F9224AD0C30001052FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA1A1F9124AD0C30001052FE /* Forecast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA1A1F9324AD0C30001052FE /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				EA1A1F9424AD0C30001052FE /* AppDelegate.swift */,
+				EA32B95F24B6522E001792E6 /* Forecast.xcdatamodeld */,
+				EA1A1F9624AD0C30001052FE /* SceneDelegate.swift */,
+				EA1A1FB024AD2079001052FE /* WeathersLoader.swift */,
+				EA1A1FAE24AD1F65001052FE /* Weather.swift */,
+				EA1A1FAC24AD1D9C001052FE /* WeatherCell.swift */,
+				EA1A1F9A24AD0C30001052FE /* Main.storyboard */,
+				EA32B95D24B64E90001792E6 /* ToDoCoreDataViewController.swift */,
+				EA32B96624B760B9001792E6 /* TaskCoreDataCell.swift */,
+				EA32B95B24B62BFF001792E6 /* TaskCell.swift */,
+				EA32B95924B628F2001792E6 /* ToDoViewController.swift */,
+				EA32B95024B61819001792E6 /* UserViewController.swift */,
+				EA32B94E24B615A4001792E6 /* Persistance.swift */,
+				EA32B90C24B29D31001792E6 /* HourCollectionViewCell.swift */,
+				EA32B90024AFD0FB001792E6 /* AlamofireViewController.swift */,
+				EA1A1F9D24AD0C35001052FE /* Assets.xcassets */,
+				EA1A1F9F24AD0C35001052FE /* LaunchScreen.storyboard */,
+				EA1A1FA224AD0C35001052FE /* Info.plist */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		EA32B90324B283F7001792E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA32B95624B62631001792E6 /* RealmSwift.framework */,
+				EA32B95224B6262D001792E6 /* Realm.framework */,
+				EA32B90524B2840B001792E6 /* Alamofire.framework */,
+				EA32B90424B283F7001792E6 /* Alamofire.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA1A1F9024AD0C30001052FE /* Forecast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1A1FA524AD0C35001052FE /* Build configuration list for PBXNativeTarget "Forecast" */;
+			buildPhases = (
+				EA1A1F8D24AD0C30001052FE /* Sources */,
+				EA1A1F8E24AD0C30001052FE /* Frameworks */,
+				EA1A1F8F24AD0C30001052FE /* Resources */,
+				EA32B90924B284CE001792E6 /* ShellScript */,
+				EA32B95524B6262D001792E6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Forecast;
+			productName = Forecast;
+			productReference = EA1A1F9124AD0C30001052FE /* Forecast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA1A1F8924AD0C30001052FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Berezkin;
+				TargetAttributes = {
+					EA1A1F9024AD0C30001052FE = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = EA1A1F8C24AD0C30001052FE /* Build configuration list for PBXProject "Forecast" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1A1F8824AD0C30001052FE;
+			productRefGroup = EA1A1F9224AD0C30001052FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1A1F9024AD0C30001052FE /* Forecast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA1A1F8F24AD0C30001052FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1A1FA124AD0C35001052FE /* LaunchScreen.storyboard in Resources */,
+				EA1A1F9E24AD0C35001052FE /* Assets.xcassets in Resources */,
+				EA1A1F9C24AD0C30001052FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA32B90924B284CE001792E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Alamofire.framework",
+				"$(SRCROOT)/Realm.framework",
+				"$(SRCROOT)/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA1A1F8D24AD0C30001052FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA32B95A24B628F2001792E6 /* ToDoViewController.swift in Sources */,
+				EA1A1FAD24AD1D9C001052FE /* WeatherCell.swift in Sources */,
+				EA32B95E24B64E90001792E6 /* ToDoCoreDataViewController.swift in Sources */,
+				EA32B95124B61819001792E6 /* UserViewController.swift in Sources */,
+				EA1A1FB124AD2079001052FE /* WeathersLoader.swift in Sources */,
+				EA1A1FAF24AD1F65001052FE /* Weather.swift in Sources */,
+				EA32B90D24B29D31001792E6 /* HourCollectionViewCell.swift in Sources */,
+				EA1A1F9524AD0C30001052FE /* AppDelegate.swift in Sources */,
+				EA32B95C24B62BFF001792E6 /* TaskCell.swift in Sources */,
+				EA32B94F24B615A4001792E6 /* Persistance.swift in Sources */,
+				EA32B96124B6522E001792E6 /* Forecast.xcdatamodeld in Sources */,
+				EA1A1F9724AD0C30001052FE /* SceneDelegate.swift in Sources */,
+				EA32B90124AFD0FB001792E6 /* AlamofireViewController.swift in Sources */,
+				EA32B96724B760B9001792E6 /* TaskCoreDataCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA1A1F9A24AD0C30001052FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1A1F9B24AD0C30001052FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA1A1F9F24AD0C35001052FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1A1FA024AD0C35001052FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA1A1FA324AD0C35001052FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA1A1FA424AD0C35001052FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA1A1FA624AD0C35001052FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q6UZQT7XG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Forecast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Berezkin.Forecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA1A1FA724AD0C35001052FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q6UZQT7XG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Forecast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Berezkin.Forecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA1A1F8C24AD0C30001052FE /* Build configuration list for PBXProject "Forecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1A1FA324AD0C35001052FE /* Debug */,
+				EA1A1FA424AD0C35001052FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1A1FA524AD0C35001052FE /* Build configuration list for PBXNativeTarget "Forecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1A1FA624AD0C35001052FE /* Debug */,
+				EA1A1FA724AD0C35001052FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA32B95F24B6522E001792E6 /* Forecast.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA32B96024B6522E001792E6 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EA32B96024B6522E001792E6 /* DataModel.xcdatamodel */;
+			path = Forecast.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EA1A1F8924AD0C30001052FE /* Project object */;
+}
