@@ -27,8 +27,8 @@
 		EA32B95A24B628F2001792E6 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95924B628F2001792E6 /* ToDoViewController.swift */; };
 		EA32B95C24B62BFF001792E6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95B24B62BFF001792E6 /* TaskCell.swift */; };
 		EA32B95E24B64E90001792E6 /* ToDoCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95D24B64E90001792E6 /* ToDoCoreDataViewController.swift */; };
-		EA32B96124B6522E001792E6 /* Forecast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA32B95F24B6522E001792E6 /* Forecast.xcdatamodeld */; };
 		EA32B96724B760B9001792E6 /* TaskCoreDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32B96624B760B9001792E6 /* TaskCoreDataCell.swift */; };
+		EA32B96A24BA5596001792E6 /* Forecast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA32B96824BA5595001792E6 /* Forecast.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,8 +68,8 @@
 		EA32B95924B628F2001792E6 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		EA32B95B24B62BFF001792E6 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EA32B95D24B64E90001792E6 /* ToDoCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCoreDataViewController.swift; sourceTree = "<group>"; };
-		EA32B96024B6522E001792E6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EA32B96624B760B9001792E6 /* TaskCoreDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCoreDataCell.swift; sourceTree = "<group>"; };
+		EA32B96924BA5595001792E6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				EA1A1F9424AD0C30001052FE /* AppDelegate.swift */,
-				EA32B95F24B6522E001792E6 /* Forecast.xcdatamodeld */,
 				EA1A1F9624AD0C30001052FE /* SceneDelegate.swift */,
 				EA1A1FB024AD2079001052FE /* WeathersLoader.swift */,
 				EA1A1FAE24AD1F65001052FE /* Weather.swift */,
 				EA1A1FAC24AD1D9C001052FE /* WeatherCell.swift */,
 				EA1A1F9A24AD0C30001052FE /* Main.storyboard */,
 				EA32B95D24B64E90001792E6 /* ToDoCoreDataViewController.swift */,
+				EA32B96824BA5595001792E6 /* Forecast.xcdatamodeld */,
 				EA32B96624B760B9001792E6 /* TaskCoreDataCell.swift */,
 				EA32B95B24B62BFF001792E6 /* TaskCell.swift */,
 				EA32B95924B628F2001792E6 /* ToDoViewController.swift */,
@@ -237,6 +237,7 @@
 			files = (
 				EA32B95A24B628F2001792E6 /* ToDoViewController.swift in Sources */,
 				EA1A1FAD24AD1D9C001052FE /* WeatherCell.swift in Sources */,
+				EA32B96A24BA5596001792E6 /* Forecast.xcdatamodeld in Sources */,
 				EA32B95E24B64E90001792E6 /* ToDoCoreDataViewController.swift in Sources */,
 				EA32B95124B61819001792E6 /* UserViewController.swift in Sources */,
 				EA1A1FB124AD2079001052FE /* WeathersLoader.swift in Sources */,
@@ -245,7 +246,6 @@
 				EA1A1F9524AD0C30001052FE /* AppDelegate.swift in Sources */,
 				EA32B95C24B62BFF001792E6 /* TaskCell.swift in Sources */,
 				EA32B94F24B615A4001792E6 /* Persistance.swift in Sources */,
-				EA32B96124B6522E001792E6 /* Forecast.xcdatamodeld in Sources */,
 				EA1A1F9724AD0C30001052FE /* SceneDelegate.swift in Sources */,
 				EA32B90124AFD0FB001792E6 /* AlamofireViewController.swift in Sources */,
 				EA32B96724B760B9001792E6 /* TaskCoreDataCell.swift in Sources */,
@@ -456,12 +456,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EA32B95F24B6522E001792E6 /* Forecast.xcdatamodeld */ = {
+		EA32B96824BA5595001792E6 /* Forecast.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EA32B96024B6522E001792E6 /* DataModel.xcdatamodel */,
+				EA32B96924BA5595001792E6 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = EA32B96024B6522E001792E6 /* DataModel.xcdatamodel */;
+			currentVersion = EA32B96924BA5595001792E6 /* DataModel.xcdatamodel */;
 			path = Forecast.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

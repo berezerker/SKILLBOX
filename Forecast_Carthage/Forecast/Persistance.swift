@@ -4,7 +4,7 @@ import RealmSwift
 
 class Task: Object{
     @objc dynamic var task: String = ""
-    @objc dynamic var id: Int = 0
+    @objc dynamic var id: String = ""
 }
 
 class PersistanceTask{
@@ -16,30 +16,19 @@ class PersistanceTask{
         let allTasks = realm.objects(Task.self)
         return allTasks
     }
-    func addTask(task: String, id: Int){
+    func addTask(task: String, id: NSUUID){
         let new = Task()
         new.task = task
-        new.id = id
+        new.id = id.uuidString
         try! realm.write(){
         realm.add(new)
         }
     }
-    func deleteTask(_ object: Task){
+    func deleteTask(_ id: String){
         try! realm.write{
-            if let objToDelete = realm.objects(Task.self).filter("task = '\(object.task)' AND id = \(object.id) ").first{
+            if let objToDelete = realm.objects(Task.self).filter("id = %@", id).first{
                 realm.delete(objToDelete)
             }
-        }
-    }
-    
-    func updateData(){
-         var i = 1
-        let objects = realm.objects(Task.self)
-        try! realm.write{
-        for v in objects{
-            v.id = i
-            i += 1
-        }
         }
     }
 }

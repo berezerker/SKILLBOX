@@ -6,20 +6,17 @@ class ToDoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newToDoField: UITextField!
     @IBAction func addNewTask(_ sender: Any) {
-        PersistanceTask.shared.addTask(task: newToDoField.text!, id: PersistanceTask.shared.allTasks().count + 1)
+        PersistanceTask.shared.addTask(task: newToDoField.text!, id: NSUUID())
         newToDoField.text = ""
         tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        PersistanceTask.shared.updateData()
-        
     }
     
     func deleteButtonWasTappedIn(cell: TaskCell) {
-        tableView.beginUpdates()
         tableView.deleteRows(at: [self.tableView.indexPath(for: cell)!], with: .left)
-        tableView.endUpdates()
+        tableView.reloadData()
     }
     
 
@@ -44,10 +41,8 @@ extension ToDoViewController: UITableViewDataSource, UITableViewDelegate{
 
 extension ToDoViewController: TaskCellDelegate{
     func deleteButton(cell: TaskCell) {
-        let task = Task()
-        task.task = cell.taskText.text!
-        task.id = cell.tag + 1
-        PersistanceTask.shared.deleteTask(task)
+        let task = PersistanceTask.shared.allTasks()[cell.tag]
+        PersistanceTask.shared.deleteTask(task.id)
         deleteButtonWasTappedIn(cell: cell)
     }
 }

@@ -11,13 +11,12 @@ class ToDoCoreDataViewController: UIViewController {
 
     @IBAction func addNew(_ sender: Any) {
         let text = nameToDoField.text!
-        let id = tasks.count + 1
-        self.save(text, id)
+        self.save(text, NSUUID())
         nameToDoField.text = ""
         tableView.reloadData()
     }
     
-    func save(_ task: String, _ id: Int) {
+    func save(_ task: String, _ id: NSUUID) {
       
       guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
@@ -43,7 +42,6 @@ class ToDoCoreDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateCoreData()
 
     }
     
@@ -71,34 +69,11 @@ class ToDoCoreDataViewController: UIViewController {
       }
     }
     func deleteButtonWasTappedIn(cell: TaskCoreDataCell) {
-        tableView.beginUpdates()
         tableView.deleteRows(at: [self.tableView.indexPath(for: cell)!], with: .left)
-        tableView.endUpdates()
+        tableView.reloadData()
     }
     
-    func updateCoreData(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "TaskCore")
-        do
-        {
-            let test = try managedContext.fetch(fetchRequest)
-            for (index, v) in test.enumerated(){
-            let objectUpdate = v as! NSManagedObject
-            objectUpdate.setValue(index + 1, forKey: "id")
-            }
-            do{
-                try managedContext.save()
-            } catch{
-                print(error)
-            }
-        }
-        catch{
-            print(error)
-        }
-    }
-    
-    func deleteCoreData(id: Int16){
+    func deleteCoreData(id: NSUUID){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "TaskCore")
@@ -116,6 +91,15 @@ class ToDoCoreDataViewController: UIViewController {
         }
         catch{
             print(error)
+        }
+        let fetchRequestReload =
+          NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
+        
+        //3
+        do {
+          tasks = try managedContext.fetch(fetchRequestReload)
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
 
@@ -139,8 +123,8 @@ extension ToDoCoreDataViewController: UITableViewDataSource, UITableViewDelegate
 
 extension ToDoCoreDataViewController: TaskCoreDataCellDelegate{
     func deleteButton(cell: TaskCoreDataCell) {
-        let id = Int(cell.numberTaskLabel.text!)
-        deleteCoreData(id: Int16(id!))
+        let task = tasks[cell.tag]
+        deleteCoreData(id: task.value(forKey: "id") as! NSUUID)
         deleteButtonWasTappedIn(cell: cell)
     }
     
