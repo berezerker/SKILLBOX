@@ -31,7 +31,6 @@ extension ToDoViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") as! TaskCell
         cell.numberTaskLabel.text = "\(indexPath.row + 1)"
         cell.taskText.text = PersistanceTask.shared.allTasks()[indexPath.row].task
-        cell.tag = indexPath.row
         cell.delegate = self
         return cell
     }
@@ -41,7 +40,7 @@ extension ToDoViewController: UITableViewDataSource, UITableViewDelegate{
 
 extension ToDoViewController: TaskCellDelegate{
     func deleteButton(cell: TaskCell) {
-        let task = PersistanceTask.shared.allTasks()[cell.tag]
+        let task = PersistanceTask.shared.allTasks()[tableView.indexPath(for: cell)!.row]
         PersistanceTask.shared.deleteTask(task.id)
         deleteButtonWasTappedIn(cell: cell)
     }

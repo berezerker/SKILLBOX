@@ -5,7 +5,7 @@ import CoreData
 class ToDoCoreDataViewController: UIViewController {
     
     @IBOutlet weak var nameToDoField: UITextField!
-    var tasks: [NSManagedObject] = []
+    var tasks: [TaskCore] = []
     @IBOutlet weak var tableView: UITableView!
     var container: NSPersistentContainer!
 
@@ -34,7 +34,7 @@ class ToDoCoreDataViewController: UIViewController {
 
       do {
         try managedContext.save()
-        tasks.append(taskObject)
+        tasks.append(taskObject as! TaskCore)
       } catch let error as NSError {
         print("Could not save. \(error), \(error.userInfo)")
       }
@@ -59,7 +59,7 @@ class ToDoCoreDataViewController: UIViewController {
       
       //2
       let fetchRequest =
-        NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
+        NSFetchRequest<TaskCore>(entityName: "TaskCore")
       
       //3
       do {
@@ -92,15 +92,7 @@ class ToDoCoreDataViewController: UIViewController {
         catch{
             print(error)
         }
-        let fetchRequestReload =
-          NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
-        
-        //3
-        do {
-          tasks = try managedContext.fetch(fetchRequestReload)
-        } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
-        }
+        tasks.removeAll(where: { $0.id! == id as UUID })
     }
 
 }
