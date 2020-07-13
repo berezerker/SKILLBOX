@@ -80,6 +80,7 @@ class ToDoCoreDataViewController: UIViewController {
         fetchRequest.predicate = NSPredicate(format: "id = %@", "\(id)")
         do
         {
+            tasks.removeAll(where: { $0.id! == id as UUID })
             let test = try managedContext.fetch(fetchRequest)
             let object = test[0] as! NSManagedObject
             managedContext.delete(object)
@@ -92,7 +93,6 @@ class ToDoCoreDataViewController: UIViewController {
         catch{
             print(error)
         }
-        tasks.removeAll(where: { $0.id! == id as UUID })
     }
 
 }
@@ -106,7 +106,6 @@ extension ToDoCoreDataViewController: UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCoreDataCell") as! TaskCoreDataCell
         cell.numberTaskLabel.text = "\(indexPath.row + 1)"
         cell.taskText.text = tasks[indexPath.row].value(forKeyPath: "task") as? String
-        cell.tag = indexPath.row
         cell.delegate = self
         return cell
     }
@@ -115,8 +114,8 @@ extension ToDoCoreDataViewController: UITableViewDataSource, UITableViewDelegate
 
 extension ToDoCoreDataViewController: TaskCoreDataCellDelegate{
     func deleteButton(cell: TaskCoreDataCell) {
-        let task = tasks[cell.tag]
-        deleteCoreData(id: task.value(forKey: "id") as! NSUUID)
+        let task = tasks[tableView.indexPath(for: cell)!.row]
+        deleteCoreData(id: task.id! as NSUUID)
         deleteButtonWasTappedIn(cell: cell)
     }
     
